@@ -1,5 +1,5 @@
 # smartbinning_pulsators
-Codes for the Kliapets et al (2025) paper:
+Codes for the Kliapets et al (2025) paper on finding candidate hybrid pulsators in the TESS data:
 1. smart_bins.py: binning of the periodogram;
 2. features_nominal.py: extracting features for nominal mission TESS light curves;
 3. features_extended.py: extracting features for extended mission TESS light curves;
