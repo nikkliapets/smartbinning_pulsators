@@ -84,7 +84,7 @@ def parallel_proc(df, n_jobs=48):
         results = list(executor.map(compute_parameters, chunks))
     return pd.concat(results)
 
-#votable = parse_single_table(YOUR VOT TABLE, i.e. from Gaia)
+#votable = parse_single_table(YOUR VOT TABLE from Gaia)
 df = votable.to_table().to_pandas()
 df = parallel_proc(df)
 df.to_csv('fundamental_params.csv')
