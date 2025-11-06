@@ -128,16 +128,16 @@ def extract_periodogram_features(path):
 
         sorted_idx = np.argsort(power)[::-1]
 
-        def safe_amp(i):
+        def extr_amp(i):
             return np.sqrt(power[sorted_idx[i]]) if i < len(sorted_idx) else np.nan
 
-        def safe_freq(i):
+        def extr_freq(i):
             return frequency[sorted_idx[i]] if i < len(sorted_idx) else np.nan
 
-        freq_max = safe_freq(0)
-        amp_max = safe_amp(0)
-        freq_2nd = safe_freq(1)
-        amp_2nd = safe_amp(1)
+        freq_max = extr_freq(0)
+        amp_max = extr_amp(0)
+        freq_2nd = extr_freq(1)
+        amp_2nd = extr_amp(1)
 
         model_flux = ls.model(time, freq_max)
         residuals = flux - model_flux
