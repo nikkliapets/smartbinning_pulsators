@@ -215,7 +215,6 @@ def extract_features(fits_file, periodogram_dir=None):
                 result[f'Skew{i+1}p'] = skew(power_slice)
                 result[f'Kurt{i+1}p'] = kurtosis(power_slice)
 
-        # Metadata
         parts = os.path.basename(fits_file).split('_')
         gaia_part = [p for p in parts if 'gaiaid' in p][0]
         gaia_id = gaia_part.split('-')[1]
