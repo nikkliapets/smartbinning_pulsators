@@ -321,7 +321,7 @@ def process_all_fits(master_folder, output_dir, n_jobs=100, max_discovery_worker
         del results, valid_dfs, batch_df
         gc.collect()
 
-#sector_folders = [ADD THE SECTOR FOLDERS YOU WANT TO PROC]
+#sector_folders = [ADD THE SECTOR FOLDERS YOU WANT TO WORK WITH]
 #base_path = 'ADD YOUR BASE BATH'
 
 for sector in sector_folders:
